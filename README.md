@@ -21,7 +21,7 @@ Recently, there are a growing number of forecasting models using Artificial Neur
 
 ### Data Sources
 
-There are two primary data sources: geocoded patent data and ILOSTAT Labor trends data. The geocoded patent data was gathered from(Rassenfosse, Kozak, and Seliger 2014), published in Nature. We also gathered data from multiple soureces on Country specific GDP, Population, and Inflation. 
+There are two primary data sources: geocoded patent data and ILOSTAT Labor trends data. The geocoded patent data was gathered from(Rassenfosse, Kozak, and Seliger 2014), published in Nature. We also gathered data from multiple sources on Country specific GDP, Population, and Inflation. 
 
 The geocoded patent data is primarily for the priority/first filings, the documents that first describe the invention. We used the geocoded patent data recorded by country of the inventor rather that by country of the applicant since the former has over 600,000 more observations which are not present in the latter. The geocoded patent data (by country of inventor) is for 54 named countries from year 1980 to 2014. As additional predictors, we used country specific annual figures for total GDP, inflation and population.
 
