@@ -1,5 +1,5 @@
 # Forcasting Global Labor Market Trends Using Recurrent Neural Networks. 
-### Max Resnick, Haishan Yang, William Hardson, Umut Acikel, Anupam Upadhyay
+### Max Resnick
 #Introduction
 Welcome to the next generation of labor market forcasting models. Our aproach is unique in that, instead of merely using historical data, we use another data source: frequency of patent filings. In theory, the frequency of patent filings will allow us to predict points of rapid inflection which would not otherwise be detectable in the data. 
 #Literature Review
@@ -12,15 +12,8 @@ There are other approaches employed by BLS such as cohort approaches and behavio
 Recently, there are a growing number of forecasting models using Artificial Neural Networks (ANN), which allow complex non-linear relationships between the response variable and its predictors (Hyndman and Athanasopoulos,2014). Using panel data of 439 German regions, Patuelli et al (2006) evaluated the performance of ANN models as forecasting tools for regional employment growth. Al-Zwainy et al (2012) built a model based on ANN to predict the productivity of finishing marble works for floors. They found that the model had an ability to predict the productivity for finishing works with a very good degree of accuracy. The coefficient of correlation was 89.55% and average accuracy percentage of 90.9%. 
 
 
-#Theoretical Framework
-
-### Real Analyticity and Labor Market forcasts. 
-
-A function $f: \mathbb{R}^n \to \mathbb{R}^m$ is in $C^0(\mathbb{R^n,R^m})$ provided that it is continuous. It is in $C^1(\mathbb{R^n,R^m})$ proved that each of the partial derivatives at every point exist and are continuous. It is in $C^k(\mathbb{R^n,R^m})$ provided that the at every point, the $k$'th order partial derivatives of $f$ exist and are continuous. $f$ is in $C^\infty(\mathbb{R^n,R^m})$ provided that for each $k \in \mathbb{N}$, $f \in C^k(\mathbb{R^n,R^m})$. Finally the function $f$ is in $C^\omega (\mathbb{R^n,R^m})$ provided that it can be locally represented by a power series at every point. If $f \in C^\omega$ then $f$ is called *Real Analytic*.
-
-This may seem irrelivent to the discussion of labor market trends; however, when you consider that labor market forcasts often involve power series, it is topical. When there are points where a function is not real analytic, it can be difficult to forcast beyond those points. Such points exist in the labor market. For example, the industrial revolution would have been impossible to predict with a simple power series aproach. For this reason, we have chosen to use patent data to try and predict the phase shifts before they ocour. In other words, we want to stay ahead of the changing trends in the labor market. This does not call for us to eliminate the use of power series forcasts; however it does sugest that power series alone are not sufficient to predict labor market trends.
-
 #Data Sources
+
 This study useses two primary data sources: geocoded patent data for the independent variable and ILOSTAT outcome data. The geocoded patent data was gathered from(Rassenfosse, Kozak, and Seliger 2014), published in Nature. We also gathered data from multiple soureces on Country specific GDP, Population, and Inflation. 
 
 The geocoded patent data is primarily for the priority/first filing, that is the patent document that first describes the invention. We used the geocoded patent data recorded by country of the inventor rather that by country of the applicant since the former has over 600,000 more observations which are not present in the latter. The geocoded patent data (by country of inventor) is for 54 named countries from year 1980 to 2014. The dataset variables were collapsed from 17 variables in original dataset to only 3 variables that are most relevant to the study; country, year and frequency of filing. Likewise, for the case of control variables, we used the country specific annual figures for total GDP, inflation and total population as the most relevant to our study from year 1980 to 2018.
