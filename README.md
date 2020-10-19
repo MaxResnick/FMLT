@@ -1,2 +1,29 @@
 # Forcasting Global Labor Market Trends Using Recurrent Neural Networks. 
-Forcasting Labor Market Trends Using Geocoded Patent Data
+### Max Resnick, Haishan Yang, William Hardson, Umut Acikel, Anupam Upadhyay
+#Introduction
+Welcome to the next generation of labor market forcasting models. Our aproach is unique in that, instead of merely using historical data, we use another data source: frequency of patent filings. In theory, the frequency of patent filings will allow us to predict points of rapid inflection which would not otherwise be detectable in the data. 
+#Literature Review
+Labor force projections are important references for policy making. Since 1915, the U.S. Bureau of Labor Statistics (BLS) has been publishing a journal, the Monthly Labor Review, which contains labor statistics and projections. (U.S. Bureau of Labor Statistics).
+
+The standard labor projections apply econometrics and time-series models. In these models, the labor participation rate depends on several major components: labor force, aggregate economy, industry final demand, occupational employment, industry employment and industry output. However, over the years, the projections from BLS constantly underestimate the real trend because other trends such as economic growth, population dynamics and change in occupational employment, due to technological advancements are often unpredictable. For example, increasing life expectancy has caused people to stay in the labor force longer. The immigration is also important in the dynamics of the labor force. (Saunders, 2005)
+
+There are other approaches employed by BLS such as cohort approaches and behavior approaches. The former strategy is to follow a representative cohort closely for a period of time. Then based on the data collected from this cohort, the BLS predicts the change in a larger population. The later approach has been at the center of much labor economics research for two decades. It studies the relationship between the socioeconomic characteristics and the labor supply. One example of this research is to study income and substitution effects in the labor market (Franklin, 2007).
+
+Recently, there are a growing number of forecasting models using Artificial Neural Networks (ANN), which allow complex non-linear relationships between the response variable and its predictors (Hyndman and Athanasopoulos,2014). Using panel data of 439 German regions, Patuelli et al (2006) evaluated the performance of ANN models as forecasting tools for regional employment growth. Al-Zwainy et al (2012) built a model based on ANN to predict the productivity of finishing marble works for floors. They found that the model had an ability to predict the productivity for finishing works with a very good degree of accuracy. The coefficient of correlation was 89.55% and average accuracy percentage of 90.9%. 
+
+
+#Theoretical Framework
+
+### Real Analyticity and Labor Market forcasts. 
+
+A function $f: \mathbb{R}^n \to \mathbb{R}^m$ is in $C^0(\mathbb{R^n,R^m})$ provided that it is continuous. It is in $C^1(\mathbb{R^n,R^m})$ proved that each of the partial derivatives at every point exist and are continuous. It is in $C^k(\mathbb{R^n,R^m})$ provided that the at every point, the $k$'th order partial derivatives of $f$ exist and are continuous. $f$ is in $C^\infty(\mathbb{R^n,R^m})$ provided that for each $k \in \mathbb{N}$, $f \in C^k(\mathbb{R^n,R^m})$. Finally the function $f$ is in $C^\omega (\mathbb{R^n,R^m})$ provided that it can be locally represented by a power series at every point. If $f \in C^\omega$ then $f$ is called *Real Analytic*.
+
+This may seem irrelivent to the discussion of labor market trends; however, when you consider that labor market forcasts often involve power series, it is topical. When there are points where a function is not real analytic, it can be difficult to forcast beyond those points. Such points exist in the labor market. For example, the industrial revolution would have been impossible to predict with a simple power series aproach. For this reason, we have chosen to use patent data to try and predict the phase shifts before they ocour. In other words, we want to stay ahead of the changing trends in the labor market. This does not call for us to eliminate the use of power series forcasts; however it does sugest that power series alone are not sufficient to predict labor market trends.
+
+#Data Sources
+This study useses two primary data sources: geocoded patent data for the independent variable and ILOSTAT outcome data. The geocoded patent data was gathered from(Rassenfosse, Kozak, and Seliger 2014), published in Nature. We also gathered data from multiple soureces on Country specific GDP, Population, and Inflation. 
+
+The geocoded patent data is primarily for the priority/first filing, that is the patent document that first describes the invention. We used the geocoded patent data recorded by country of the inventor rather that by country of the applicant since the former has over 600,000 more observations which are not present in the latter. The geocoded patent data (by country of inventor) is for 54 named countries from year 1980 to 2014. The dataset variables were collapsed from 17 variables in original dataset to only 3 variables that are most relevant to the study; country, year and frequency of filing. Likewise, for the case of control variables, we used the country specific annual figures for total GDP, inflation and total population as the most relevant to our study from year 1980 to 2018.
+
+#Discussion
+Although the current model does not place much weight on patent data, there are reasons to suspect that with a more taylored gathering process, the patent data might be more useful. For instance, we only used 3 aspects of the patent filings in our model: country, year, and the number of patents filed in that year. If we were to gather sector level data, then impact of sector level innovation would be clearer, leading to more predictive power. This aproach suggests the use of Natural Language Processing(NLP) classification methods to ascociate the patents with their respective sectors. 
