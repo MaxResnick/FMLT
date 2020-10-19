@@ -2,7 +2,7 @@
 ### Max Resnick
 
 ### Acknowledgements:
-Thanks to Haishan Yang, William Hardson, Umut Acikel, and Anupam Upadhyay. For assisting with the first iteration of this project which was first inteded for a UN competition. That version is available at https://colab.research.google.com/drive/1RpQGlfvw1KL_CmZE0TDXUjH5q0V81O5H#scrollTo=cuXc_yViG5-T
+Thanks to Haishan Yang, William Hardson, Umut Acikel, and Anupam Upadhyay. For assisting with the first iteration of this project. That version is available at https://colab.research.google.com/drive/1RpQGlfvw1KL_CmZE0TDXUjH5q0V81O5H#scrollTo=cuXc_yViG5-T
 
 ### Introduction
 
@@ -26,3 +26,13 @@ There are two primary data sources: geocoded patent data and ILOSTAT Labor trend
 The geocoded patent data is primarily for the priority/first filings, the documents that first describe the invention. We used the geocoded patent data recorded by country of the inventor rather that by country of the applicant since the former has over 600,000 more observations which are not present in the latter. The geocoded patent data (by country of inventor) is for 54 named countries from year 1980 to 2014. As additional predictors, we used country specific annual figures for total GDP, inflation and population.
 
 
+# Citations
+
+1.	Hyndman, Rob J. and Athanasopoulos, George, 2014, Forecasting: Principles and Practice.
+2.	Patuelli, Roberto et al, 2006. "New Neural Network Methods for Forecasting Regional Employment: An Analysis of German Labour Markets," Tinbergen Institute Discussion Papers 06-020/3, Tinbergen Institute.
+3.	FMS Al-Zwainy, HA Rasheed, HF Ibraheem, 2012, “Development of the construction productivity Estimation model using artificial neural network for finishing works for floors with marble,” RPN Journal of Engineering and Applied Sciences 7 (6), 714-722
+4.	Franklin, J. C. (2007). An overview of BLS projections to 2016. Monthly Labor Review, 130(11), 3-12.
+5.	Saunders, N. C. (2005). Summary of BLS projections to 2014. Monthly Labor Review,128(11), 3-9.
+6.	U.S. Bureau of Labor Statistics, https://www.bls.gov/opub/mlr/about.html
+7. de Rassenfosse, G., Kozak, J. & Seliger, F. Geocoding of worldwide patent data. Sci Data 6, 260 (2019) doi:10.1038/s41597-019-0264-6
+8. Rilostat https://cran.r-project.org/web/packages/Rilostat/Rilostat.pdf
